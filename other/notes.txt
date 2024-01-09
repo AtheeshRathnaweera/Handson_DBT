@@ -1,0 +1,3 @@
+Profile handson_dbt written to /Users/atheeshrathnaweera/.dbt/profiles.yml using
+target's profile_template.yml and your supplied values. Run 'dbt debug'
+to validate the connection.

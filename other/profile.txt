@@ -1,0 +1,13 @@
+handson_dbt:
+  outputs:
+    dev:
+      account: dy57612.ap-south-1.aws
+      database: HANDSON_DBT_DB
+      password: Bitch123*
+      role: DB_USER
+      schema: PUBLIC
+      threads: 10
+      type: snowflake
+      user: HANDSON_DBT
+      warehouse: COMPUTE_WH
+  target: dev
