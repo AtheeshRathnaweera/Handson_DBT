@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
+  - name: example__first_model
     description: "A starter dbt model. This is the first table."
     columns:
       - name: id
@@ -11,10 +11,19 @@ models:
           - unique
           - not_null
 
-  - name: my_second_dbt_model
+  - name: example__second_model
     description: "A starter dbt model. This is the second table."
     columns:
       - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  
+  - name: example__team_locations
+    description: "Store the location information of the teams"
+    columns:
+      - name: name
         description: "The primary key for this table"
         tests:
           - unique
