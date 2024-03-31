@@ -1,3 +1,23 @@
 Profile handson_dbt written to /Users/atheeshrathnaweera/.dbt/profiles.yml using
-target's profile_template.yml and your supplied values. Run 'dbt debug'
-to validate the connection.
+target's profile_template.yml and your supplied values. 
+
+- DBT profile
+* Path: /Users/atheeshrathnaweera/.dbt/profiles.yml
+* Run 'dbt debug' to validate the connection.
+
+- DBT materialization
+* Default setting is "view"
+
+- Documentation
+* Generate docs: dbt docs generate
+* Show docs as a website: dbt docs serve
+
+- Custom Test
+* DBT Docs: https://docs.getdbt.com/best-practices/writing-custom-generic-tests
+
+- Commands
+dbt debug
+
+Build a model
+dbt build --select <model_name>
+dbt build -s <model_name>
