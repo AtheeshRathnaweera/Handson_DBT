@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: example__team_details
-    description: '{{ doc("table_team_details") }}'
+  - name: team_details_marts
+    description: '{{ doc("table_events") }}'
 
     columns:
       - name: name
@@ -18,8 +18,3 @@ models:
 
       - name: state
         description: '{{ doc("team_details_team_state") }}'
-
-      - name: is_champion
-        tests:
-          - accepted_values:
-              values: [true, false]
