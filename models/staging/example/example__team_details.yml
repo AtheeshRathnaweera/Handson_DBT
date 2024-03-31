@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: example__team_details
+    description: "Store the information of the teams"
+
+    columns:
+      - name: name
+        description: "The name of the team"
+        tests:
+          - unique
+          - not_null
+
+      - name: city
+        description: "The city of the team"
+        tests:
+          - is_la_team
+
+      - name: state
+        description: "The state key for this table"

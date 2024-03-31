@@ -19,12 +19,3 @@ models:
         tests:
           - unique
           - not_null
-  
-  - name: example__team_locations
-    description: "Store the location information of the teams"
-    columns:
-      - name: name
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
