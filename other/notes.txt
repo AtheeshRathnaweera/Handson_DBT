@@ -15,6 +15,12 @@ target's profile_template.yml and your supplied values.
 - Custom Test
 * DBT Docs: https://docs.getdbt.com/best-practices/writing-custom-generic-tests
 
+- Hooks
+* DBT Docs: https://docs.getdbt.com/docs/build/hooks-operations
+
+- Docs Blocks
+* DBT Docs: https://docs.getdbt.com/docs/collaborate/documentation#using-docs-blocks
+
 - Commands
 dbt debug
 
