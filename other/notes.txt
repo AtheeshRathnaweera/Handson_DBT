@@ -21,9 +21,15 @@ target's profile_template.yml and your supplied values.
 - Docs Blocks
 * DBT Docs: https://docs.getdbt.com/docs/collaborate/documentation#using-docs-blocks
 
+- Source Freshness
+* Docs: https://docs.getdbt.com/reference/resource-properties/freshness
+
 - Commands
 dbt debug
 
-Build a model
+# Build a model
 dbt build --select <model_name>
 dbt build -s <model_name>
+
+# Check the freshness
+dbt source snapshot-freshness

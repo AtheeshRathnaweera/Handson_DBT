@@ -27,12 +27,28 @@ SHOW WAREHOUSES;
 GRANT USAGE ON WAREHOUSE COMPUTE_WH to ROLE DB_USER;
 
 -- create audits table
+
 CREATE TABLE IF NOT EXISTS HANDSON_DBT_DB.PUBLIC.dbt_audits (
   id INT AUTOINCREMENT START 1 INCREMENT 1,
   audit_type VARCHAR(50),
   created_at TIMESTAMP_TZ DEFAULT CURRENT_TIMESTAMP()
 );
 
-INSERT INTO HANDSON_DBT_DB.PUBLIC.dbt_audits values ('run_end');
+INSERT INTO HANDSON_DBT_DB.PUBLIC.dbt_audits (audit_type) values ('run_end');
 
 SELECT * FROM HANDSON_DBT_DB.PUBLIC.dbt_audits;
+
+-- create store_months table
+
+create or replace TABLE HANDSON_DBT_DB.PUBLIC.STORE_MONTHS (
+  ID NUMBER(38,0) autoincrement start 1 increment 1,
+	NAME VARCHAR(100) NOT NULL,
+	CREATED_AT TIMESTAMP_TZ(9) DEFAULT CURRENT_TIMESTAMP()
+);
+
+INSERT INTO HANDSON_DBT_DB.PUBLIC.STORE_MONTHS (NAME) VALUES ('Janurary'), ('February'), ('March');
+
+SELECT
+    *,
+    datediff(min, created_at, CURRENT_TIMESTAMP()) as min_since_insert
+FROM HANDSON_DBT_DB.PUBLIC.STORE_MONTHS;
