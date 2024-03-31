@@ -8,3 +8,22 @@ sources:
     tables:
       - name: STORE_SALES
         description: 'Sales information'
+
+  - name: local_sample_data
+    description: 'Main database of this project'
+    database: HANDSON_DBT_DB  
+    schema: PUBLIC  
+    tables:
+      - name: STORE_MONTHS
+
+        freshness:
+          warn_after:
+            count: 40
+            period: minute
+          error_after:
+            count: 45
+            period: minute
+          filter: datediff('minute', created_at, current_timestamp) < 50
+        loaded_at_field: created_at
+
+        description: 'A sample table which has information about months'
