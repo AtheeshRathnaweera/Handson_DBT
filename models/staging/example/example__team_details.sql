@@ -3,7 +3,12 @@ with team_locations as (
 ),
 
 final as (
-  select * from team_locations
+  select
+    name,
+    city,
+    state,
+    iff(name = '{{ var("current_champion") }}', true, false) as is_champion
+  from team_locations
 )
 
 select * from final
