@@ -24,7 +24,25 @@ target's profile_template.yml and your supplied values.
 - Source Freshness
 * Docs: https://docs.getdbt.com/reference/resource-properties/freshness
 
-- Commands
+- Query Tags
+* Docs: https://docs.getdbt.com/reference/resource-configs/snowflake-configs#query-tags
+
+- 'State' Method
+* Docs: https://docs.getdbt.com/reference/node-selection/methods#the-state-method
+
+* list modified models
+dbt ls --models state:modified --state . 
+
+* run modified models
+dbt run --models state:modified --state . 
+
+- Packages
+* Docs: https://docs.getdbt.com/docs/build/packages
+
+- Invocation ID
+* Docs: https://docs.getdbt.com/reference/dbt-jinja-functions/invocation_id
+
+- DBT Commands
 dbt debug
 
 # Build a model
@@ -33,3 +51,6 @@ dbt build -s <model_name>
 
 # Check the freshness
 dbt source snapshot-freshness
+
+# Generate executable SQL from source model, test, and analysis files
+dbt compile
