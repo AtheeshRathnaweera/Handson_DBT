@@ -14,6 +14,13 @@ final as (
     iff(name = '{{ var("current_champion") }}', true, false) as is_champion,
     division
   from team_locations
+),
+
+invocation_id_added as (
+  select
+    *,
+    '{{ invocation_id }}' as invocation_id
+  from final
 )
 
-select * from final
+select * from invocation_id_added
