@@ -1,5 +1,6 @@
-name, city, state
-Lakers, Los Angeles, CA
-Clippers, Los Angeles, CA
-76ers, Philadelphia, PA
-Heat, Miami, FL
+name, city, state, division
+Lakers, Los Angeles, CA, Western
+Clippers, Los Angeles, CA, Western
+76ers, Philadelphia, PA, Western
+Heat, Miami, FL, Western
+Warriors, San Francisco, CA, Eastern

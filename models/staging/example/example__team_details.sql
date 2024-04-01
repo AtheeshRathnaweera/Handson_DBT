@@ -11,7 +11,8 @@ final as (
     name,
     city,
     state,
-    iff(name = '{{ var("current_champion") }}', true, false) as is_champion
+    iff(name = '{{ var("current_champion") }}', true, false) as is_champion,
+    division
   from team_locations
 )
 
