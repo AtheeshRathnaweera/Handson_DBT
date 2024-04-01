@@ -1,3 +1,7 @@
+{{ config(
+    query_tag = 'dbt_special_tag'
+) }}
+
 with team_locations as (
   select * from {{ ref('team_locations') }}
 ),
