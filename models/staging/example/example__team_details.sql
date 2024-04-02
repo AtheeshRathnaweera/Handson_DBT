@@ -1,5 +1,6 @@
 {{ config(
-    query_tag = 'dbt_special_tag'
+    query_tag = 'dbt_special_tag',
+    tags=["special"]
 ) }}
 
 with team_locations as (

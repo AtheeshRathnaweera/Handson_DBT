@@ -49,3 +49,6 @@ models:
       +materialized: view
       example:
         +materialized: table
+        +tags:
+            - p1
+            - another_tag
