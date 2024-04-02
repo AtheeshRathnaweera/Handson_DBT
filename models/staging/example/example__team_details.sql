@@ -1,6 +1,7 @@
 {{ config(
     query_tag = 'dbt_special_tag',
-    tags=["special"]
+    tags=['special'],
+    materialized='ephemeral'
 ) }}
 
 with team_locations as (
