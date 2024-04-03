@@ -42,7 +42,40 @@ dbt run --models state:modified --state .
 - Invocation ID
 * Docs: https://docs.getdbt.com/reference/dbt-jinja-functions/invocation_id
 
-- DBT Commands
+- DBT Clean
+* Docs: https://docs.getdbt.com/reference/commands/clean
+
+- Tags
+* Docs: https://docs.getdbt.com/reference/resource-configs/tags
+
+# Run/test models using a tag
+dbt run -m tag:p1
+dbt test -m tag:test_tag
+
+- Materialization
+* Docs: https://docs.getdbt.com/docs/build/materializations
+
+- DBT Intermediate Models
+* Docs: https://docs.getdbt.com/best-practices/how-we-structure/3-intermediate
+
+- DBT Show
+* Docs: https://docs.getdbt.com/reference/commands/show
+
+# Build and preview model data
+dbt show -m example__team_details
+# Limit the number of rows returned to 2
+dbt show -m example__team_details --limit 2
+# Show few columns
+dbt show --inline "select name, city from {{ ref('example__team_details') }}"
+
+- DBT Snapshots
+* Docs: https://docs.getdbt.com/docs/build/snapshots
+
+# Create snapshots
+dbt snapshot
+
+[DBT Commands]
+
 dbt debug
 
 # Build a model
@@ -54,3 +87,6 @@ dbt source snapshot-freshness
 
 # Generate executable SQL from source model, test, and analysis files
 dbt compile
+
+# Refresh the models
+dbt show -m example__team_details --full-refresh
