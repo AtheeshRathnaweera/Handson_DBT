@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: example__orders
+    columns:
+      - name: id
+        tests:
+          - not_null
+
+      - name: status
+        tests:
+          - not_null
