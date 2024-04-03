@@ -1,0 +1,15 @@
+version: 2
+
+exposures:
+
+  - name: orders_analysis
+    label: All the orders
+    type: analysis
+
+    depends_on:
+      - ref('example__orders')
+      - ref('orders_snapshot')
+
+    owner:
+      name: John Wick
+      email: data@jaffleshop.com

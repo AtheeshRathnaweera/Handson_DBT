@@ -1,0 +1,15 @@
+version: 2
+
+exposures:
+
+  - name: sales_analysis
+    label: All the sales
+    type: analysis
+
+    depends_on:
+      - ref('sample_data__store_sales')
+      - source('sample_data', 'STORE_SALES')
+
+    owner:
+      name: John Wick
+      email: data@jaffleshop.com

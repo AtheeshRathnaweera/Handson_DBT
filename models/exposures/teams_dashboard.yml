@@ -1,0 +1,15 @@
+version: 2
+
+exposures:
+
+  - name: teams_dashboard
+    label: Team details
+    type: dashboard
+
+    depends_on:
+      - ref('example__team_details')
+      - ref('team_locations')
+
+    owner:
+      name: John Wick
+      email: data@jaffleshop.com
