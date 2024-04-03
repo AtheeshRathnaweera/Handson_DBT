@@ -52,3 +52,9 @@ SELECT
     *,
     datediff(min, created_at, CURRENT_TIMESTAMP()) as min_since_insert
 FROM HANDSON_DBT_DB.PUBLIC.STORE_MONTHS;
+
+
+-- update orders table
+UPDATE HANDSON_DBT_DB.PUBLIC.ORDERS SET status='pending',UPDATED_AT=CURRENT_TIMESTAMP() WHERE id=2;
+UPDATE HANDSON_DBT_DB.PUBLIC.ORDERS SET status='shipped',UPDATED_AT=CURRENT_TIMESTAMP() WHERE id=4;
+
