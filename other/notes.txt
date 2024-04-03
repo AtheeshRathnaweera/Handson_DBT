@@ -9,8 +9,11 @@ target's profile_template.yml and your supplied values.
 * Default setting is "view"
 
 - Documentation
-* Generate docs: dbt docs generate
-* Show docs as a website: dbt docs serve
+
+# Generate docs
+dbt docs generate
+# Show docs as a website
+dbt docs serve
 
 - Custom Test
 * DBT Docs: https://docs.getdbt.com/best-practices/writing-custom-generic-tests
@@ -74,6 +77,17 @@ dbt show --inline "select name, city from {{ ref('example__team_details') }}"
 # Create snapshots
 dbt snapshot
 
+- DBT Exposures
+* Docs: https://docs.getdbt.com/docs/build/exposures
+
+- DBT Analyses Folder
+* Docs: https://docs.getdbt.com/docs/build/analyses
+
+# use the following command to get the results in target/compiled/handson_dbt/analyses/ folder.
+dbt compile
+
+____________________________________________________________________________________________
+
 [DBT Commands]
 
 dbt debug
@@ -90,3 +104,7 @@ dbt compile
 
 # Refresh the models
 dbt show -m example__team_details --full-refresh
+
+# 'target' flag
+# Compile by pointing to the PROD environment. By default it is pointed to the DEV
+dbt compile --target prod
